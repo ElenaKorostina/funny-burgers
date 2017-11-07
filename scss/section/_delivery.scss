@@ -1,0 +1,15 @@
+.delivery {
+    background-image: url('../img/bg/delivery.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+.delivery__container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    // align-content: center;
+    justify-content: center;
+}

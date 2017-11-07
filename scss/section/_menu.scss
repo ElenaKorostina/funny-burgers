@@ -1,0 +1,93 @@
+.menu {
+    background-image: url('../img/bg/menu.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+.menu__title {
+    width: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 0;
+    // background: red;
+    margin-top: rem(112px);
+    text-align: center;
+}
+.menu-acco {
+    width: 70%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.menu-acco__list {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.menu-acco__item {
+    display: flex;
+    height: 100%;
+}
+.menu-acco__content {
+    display: none;
+ }
+
+.menu-acco__item_activ {
+    .menu-acco__content {
+        display: block;
+        background: rgba(#333433, .93);
+        color: $white;
+        padding: rem(60px) rem(35px);
+     }
+     .menu-acco__text-rotate {
+        color: $yellow;
+    }
+    
+}
+.menu-acco__name {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    width: rem(80px);
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-shrink: 0;
+
+      &:before {
+        content: '';
+        display: block;
+        background: rgba(#4c4e50, .7);
+        height: 100%;
+        width: 100%;
+      }
+}
+.menu-acco__name_meat{
+    background-image: url('../img/content/menu1.jpg');
+}
+.menu-acco__name_veg {
+    background-image: url('../img/content/menu2.jpg');
+}
+.menu-acco__name_diet {
+    background-image: url('../img/content/menu3.jpg');
+}
+.menu-acco__text-rotate {
+    font-family: gagalinregular;
+    font-size: rem(40px);
+    color: $white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) translateY(50%);
+    // background: red;
+    line-height: rem(80px);
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+}
+
