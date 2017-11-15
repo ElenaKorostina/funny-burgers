@@ -15,6 +15,14 @@
 
 .advances__list {
     display: flex;
+    @include tablets {
+        flex-direction: column;
+      
+     }
+     @include phones {
+        flex-direction: column;
+        
+     }
     
 }
 .advances__item {
@@ -26,10 +34,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablets {
+        flex-direction: row;
+      
+     }
+     @include phones {
+        flex-direction: row;
+        
+     }
 
 }
 .advances__img {
    margin-bottom: rem(30px);
+   @include tablets {
+    margin-right: 20px;
+  
+     }
+    @include phones {
+    flex-direction: row;
+    margin-right: 15px;
+    }
+
   
     
 }
@@ -38,23 +63,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablets {
+        align-items: flex-start;
+        margin-bottom: rem(20px);
+      
+         }
+        @include phones {
+            align-items: flex-start;
+            margin-bottom: rem(15px);
+        }
 }
 .advances__img_meat {
     background-image: url('../img/content/meat.png');
     background-repeat: no-repeat;
-    width: rem(97px);
+    background-size: contain;
+    background-position: center center;
+    min-width: rem(97px);
     height: rem(89px);
 }
 .advances__img_hand {
     background-image: url('../img/content/hand.png');
     background-repeat: no-repeat;
-    width: rem(97px);
+    background-size: contain;
+    background-position: center center;
+    min-width: rem(97px);
     height: rem(97px);
 }
 .advances__img_natural {
     background-image: url('../img/content/natural.png');
     background-repeat: no-repeat;
-    width: rem(97px);
+    background-size: contain;
+    background-position: center center;
+    min-width: rem(97px);
     height: rem(97px);
 }
 
@@ -66,9 +106,24 @@
     text-align: center;
     padding-bottom: rem(20px);
     // letter-spacing: -1.2px;
+    @include tablets {
+       
+        text-align: left;
+      
+         }
+        @include phones {
+            
+            text-align: left;
+        }
 }
 .advances__description {
     text-align: center;
     color: $dark;
     font-size: rem(14px);
-}
+    @include tablets {
+         text-align: left;
+          }
+    @include phones {
+         text-align: left;
+         }
+ }

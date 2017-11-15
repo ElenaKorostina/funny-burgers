@@ -13,13 +13,45 @@
     right: 0;
     width: 50%;
     background: rgba(#2f3234, .93);
-    padding-left: 80px;
+    padding-left: rem(80px);
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: rem(50px);
+      @include tablets {
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+       }
+      @include phones {
+        width: 100%;
+        align-items: center;
+        padding-left: 0;
+      }
 }
 .company-acco {
-  margin-top: 30px;
+  margin-top: rem(30px);
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.company-acco__item {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+  @include phones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .company-acco__trigger {
     color: #fff;
@@ -36,18 +68,26 @@
       border: 5px solid transparent;
       border-top-color: $yellow;
       border-bottom-width: 0px;
-      margin-right: 8px;
+      margin-right: rem(8px);
     }
   }
-  .company-acco__content {
-    display: flex;
-  }
+ 
   
   .company-acco__text {
     color: #fff;
-    font-size: 14px;
-    margin-left: 20px;
-    width: 345px;
+    font-size: rem(14px);
+    margin-left: rem(20px);
+    margin-right: rem(20px);
+    // width: rem(345px);
+    @include tablets {
+      text-align: center;
+      margin-top: rem(20px);
+     }
+    @include phones {
+      text-align: center;
+      margin-top: rem(15px);
+    }   
+    
    
   }
   
@@ -68,16 +108,29 @@
       display: flex;
       align-items: center;
       position: relative;
-      top: -20px;
-      left: 20px;
-      width: 335px;
+      bottom: rem(20px);
+      left: rem(20px);
+      @include tablets {
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+       }
+      @include phones {
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+      }
     }
   } 
+  .company-acco__pic {
+    border-radius: 50%; 
+    overflow: hidden;
+  }
   .company-acco__pig-img {
       display: block;
-      border-radius: 50%;
+      // border-radius: 50%;
   }
  .company-acco__text-title {
    font-weight: bold;
-   margin-bottom: 20px;
+   margin-bottom: rem(20px);
  }

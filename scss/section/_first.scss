@@ -1,5 +1,5 @@
 .first {
-    background-image: url('../img/bg/first.png');
+    background-image: url('../img/bg/first.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -15,8 +15,20 @@
 .header__logo {
     margin-right: auto;
   }
+.logo__img {
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 .nav  {
     margin-right: rem(15px); 
+        @include tablets {
+             display: none;
+      }
+         @include phones {
+            display: none;
+      }
 }
 .nav-list {
     margin: 0;
@@ -31,7 +43,7 @@
       vertical-align: middle;
       content: ' ';
       @include circle(4px, #fff);
-      margin: 0 rem(13px);
+      margin: 0 rem(12px);
     }
     &:last-child:after {
       display: none;
@@ -51,55 +63,145 @@
       text-decoration: underline;
     }
 }  
-
+.drop-menu {
+   display: none;
+    @include tablets {
+        display: block;
+        width: rem(25px);
+        height: rem(22px);
+        background: url('../img/drop-menu.png') no-repeat;
+        background-size: 100% auto;
+        margin-left: rem(15px);
+ }
+    @include phones {
+        display: block;
+        width: rem(25px);
+        height: rem(22px);
+        background: url('../img/drop-menu.png') no-repeat;
+        background-size: 100% auto;
+        margin-left: rem(13px);
+ }
+    
+}
 .first__container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
   }
 
 .first__content {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
+    // flex-wrap: wrap;
+    // flex-grow: 1;
     align-items: center;
     padding-bottom: 10%;
+        @include tablets {
+            flex-direction: column;
+            width: 80%;
+        }
+         @include phones {
+            flex-direction: column;
+            width: 95%;
+        }
   }
 
-.banner .first__slogan {
+.first__banner .first__slogan {
     flex-basis: 50%;
-    display: flex;
+    @include tablets {
+                width: 100%;
+    }
+     @include phones {
+                width: 100%;
+    }
+    
+    
 }
 
 .first__slogan {
-    margin: rem(20px) 0px 0px 13px;
+    margin: rem(20px) 0px 0px rem(13px);
+         @include tablets {
+            align-items: center;
+            margin: 0;
+            text-align: center;
+          
+         }
+         @include phones {
+            align-items: center;
+            margin: 0;
+            
+         }
+    
 }
 
 .first__banner {
-    background-image: url('../img/content/steam.png'),
-                      url('../img/content/drops.png');
-    background-position: 35px -30px, 0px 35px;                  
-    background-repeat: no-repeat, no-repeat;
-    width: 451px;
-    height: 420px;
-    margin-left: 15px;
+    // background-image: url('../img/content/steam.png'),
+    //                   url('../img/content/drops.png');
+    // background-position: rem(35px) -rem(30px), 0px rem(35px);                  
+    // background-repeat: no-repeat, no-repeat;
+    background: url('../img/content/burger.png') no-repeat;
+    background-size: contain; 
+    background-position: center center;
+    width: rem(451px);
+    height: rem(420px);
+    margin-left: rem(15px);
+    @include tablets {
+        margin-bottom: rem(20px);
+      
+     }
+     @include phones {
+        margin-bottom: rem(15px);
+     }
 } 
 
 .first__text {
     font-family: lifehackmedium;
     color: white;
-    font-size: 60px;
-    line-height: 60px;
-    letter-spacing: 1.5px;
+    font-size: rem(60px);
+    line-height: rem(60px);
+    letter-spacing: rem(1.5px);
+        @include tablets {
+            text-align: center;
+            font-size: rem(40px);
+            line-height: rem(40px);
+        }
+         @include phones {
+            text-align: center;
+            font-size: rem(40px);
+            line-height: rem(40px);
+         }
+}
+.arrow {
+    margin-bottom: rem(40px);
+    width: rem(47px);
+    height: rem(47px);
+    border-radius: 50%;
+    position: relative;
+    transition: 0.5s;
+    &:hover {
+        background: rgba($white, .5);
+
+        .arrow__scroll {
+            transform: scale(1.1);
+            fill: $dark;
+            }
+    }
+  
+
 }
 
-
-.arrow {
-    background: url('../img/content/arrow-scroll.png');
-    width: 29px;
-    height: 14px;
-    margin-bottom: 40px;
+.arrow__scroll {
+    display: block;
+    position: absolute;
+    top: rem(17px);
+    left: rem(8px);
+    fill: $white;
+    width: rem(29px);
+    height: rem(14px);
+    margin-bottom: rem(40px);
+    transition: 0.5s;
+    
 }
