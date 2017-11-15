@@ -1,0 +1,68 @@
+.footer {
+    margin-top: auto;
+    background-image: url('../img/bg/footer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:rem(60px);
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: rem(940px);
+    margin: 0 auto;
+      @include tablets {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;    
+       }
+      @include phones {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+      }
+  
+}
+.footer__contact-adress {
+    color: $white;
+    font-size: rem(14px);
+}
+.footer__contact-phone {
+    font-size: rem(14px);
+    color: $orange;
+    &:hover .phone {
+        fill: white;
+      }
+    &:hover {
+        color: $white;
+    }  
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: rem(10px);
+    fill: #5a5a5a;
+    width: rem(20px);
+    height: rem(20px);
+    &:hover {
+      fill: white;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  .phone {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: rem(20px);
+    fill: $orange;
+    width: rem(12px);
+    height: rem(11px);
+    &:first-child {
+      margin-left: 0;
+    }
+  }

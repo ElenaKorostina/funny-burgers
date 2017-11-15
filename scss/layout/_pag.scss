@@ -1,0 +1,46 @@
+.pagination {
+    position: fixed;
+    top: rem(83px);
+    right: rem(26px);
+    @include tablets {
+        display: none;
+ }
+    @include phones {
+       display: none;
+ }
+}
+.pagination-list {
+    display: flex;
+    flex-direction: column;
+
+}
+.pagination-list__item {
+    position: relative;
+}
+.pagination-list__link {
+    display: block;
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    background: $white;
+    margin-bottom: rem(15px);
+    // border: 1px solid rgba(#454545, .7)
+    /* width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid white;
+    opacity: 1;
+     */
+}
+.pagination-list__item:hover .pagination-list__link::after {
+    content: '';
+    display: block;
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border:rem(1px) solid white;
+    position: absolute;
+    top: rem(-5px);
+    left: rem(-5px);
+   
+}
