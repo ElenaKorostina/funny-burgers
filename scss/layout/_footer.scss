@@ -1,5 +1,6 @@
 .footer {
-    margin-top: auto;
+    // margin-top: auto;
+    display: flex;
     background-image: url('../img/bg/footer.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,25 +9,27 @@
     position: absolute;
     bottom: 0;
     left: 0;
+      @include phones {
+        min-height:rem(116px);
+      }
 }
 .footer__content {
     display: flex;
+    width: 95%;
     justify-content: space-between;
     align-items: center;
     max-width: rem(940px);
     margin: 0 auto;
-      @include tablets {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;    
-       }
+
       @include phones {
         flex-direction: column;
         align-items: center;
         justify-content: center; 
+        text-align: center;  
       }
   
 }
+
 .footer__contact-adress {
     color: $white;
     font-size: rem(14px);
@@ -40,6 +43,11 @@
     &:hover {
         color: $white;
     }  
+}
+.footer__sosial {
+  @include phones {
+  margin-top: rem(15px);
+  }
 }
 .icon {
     display: inline-block;

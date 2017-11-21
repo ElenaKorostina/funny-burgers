@@ -1,7 +1,7 @@
 .pagination {
     position: fixed;
     top: rem(83px);
-    right: rem(26px);
+    right: rem(10px);
     @include tablets {
         display: none;
  }

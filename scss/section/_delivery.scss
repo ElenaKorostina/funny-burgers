@@ -50,6 +50,16 @@
     padding: rem(5px);
     width: 100%;
     height: rem(35px);
+    outline: none;
+    background-image: linear-gradient(to bottom, #eee9eb, #fff);
+    transition: 0.3s;
+    &:hover {
+      background-image: linear-gradient(to top, #eee9eb, #fff);
+    }
+    &:focus {
+      border: rem(1px) solid $yellow;
+    }
+      
   }
 
   .form__input_comment {
@@ -59,6 +69,10 @@
   .form__row {
     display: flex;
     margin-bottom: rem(20px);
+    flex-wrap: wrap;
+    @include phones {
+      flex-wrap: nowrap;
+    }
     
   }
   
@@ -69,8 +83,21 @@
     
     &:first-child {
       margin-right: 0;
+      
+      @include tablets {
+        margin-left: rem(0px);       
+      }
+      @include phones {
+        margin-left: rem(0px);
+      }  
+
     }
   }
+
+  .form__block_no-margin-left {
+    margin-left: rem(0px);
+  }
+
   .form__block_choise {
     display: flex;
     flex: 0;
@@ -87,7 +114,6 @@
     .form__block-title {
       margin-left: rem(35px);
     }
-
   }
   // .form__block_checkbox {
   //   display: flex;

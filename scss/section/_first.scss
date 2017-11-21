@@ -63,12 +63,15 @@
       text-decoration: underline;
     }
 }  
-.drop-menu {
+#drop-menu {
    display: none;
+   &:hover{
+  opacity: 0.8;
+   }
     @include tablets {
         display: block;
         width: rem(25px);
-        height: rem(22px);
+        height: rem(25px);
         background: url('../img/drop-menu.png') no-repeat;
         background-size: 100% auto;
         margin-left: rem(15px);
@@ -76,7 +79,7 @@
     @include phones {
         display: block;
         width: rem(25px);
-        height: rem(22px);
+        height: rem(25px);
         background: url('../img/drop-menu.png') no-repeat;
         background-size: 100% auto;
         margin-left: rem(13px);
@@ -181,6 +184,7 @@
     border-radius: 50%;
     position: relative;
     transition: 0.5s;
+    flex: none;
     &:hover {
         background: rgba($white, .5);
 

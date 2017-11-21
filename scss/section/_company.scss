@@ -92,20 +92,22 @@
   }
   
   .company-acco__content {
-    display: none;
+   display: none;
   }
   
   .company-acco__item_active {
     .company-acco__trigger {
       color: $yellow;
-  
+      
       &:before {
         transform: rotate(-180deg);
+        transition: 0.3s;
       }
     }
   
     .company-acco__content {
       display: flex;
+     
       align-items: center;
       position: relative;
       bottom: rem(20px);
@@ -125,6 +127,7 @@
   .company-acco__pic {
     border-radius: 50%; 
     overflow: hidden;
+    flex: none;
   }
   .company-acco__pig-img {
       display: block;
@@ -133,4 +136,13 @@
  .company-acco__text-title {
    font-weight: bold;
    margin-bottom: rem(20px);
+ }
+ .company-acco__text-content {
+   width: rem(205px);
+   @include tablets {
+    width: rem(332px);
+   }
+  @include phones {
+    width: rem(332px);
+  }
  }

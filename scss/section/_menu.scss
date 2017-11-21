@@ -17,15 +17,24 @@
     text-align: center;
 }
 .menu-acco {
-    width: 70%;
+    width: 70vw;
+    
     position: absolute;
     right: 0;
     height: 100%;
+    @include tablets {
+        width: 100vw;
+      }
+      @include phones {
+        width: 100vw;
+      }
 }
 
 .menu-acco__list {
     display: flex;
+   
     height: 100%;
+    // align-items: flex-end;
     position: absolute;
     right: 0;
 }
@@ -43,6 +52,12 @@
         background: rgba(#333433, .93);
         color: $white;
         padding: rem(60px) rem(35px);
+          @include tablets {
+            padding: rem(30px) rem(25px);
+          }
+          @include phones {
+            padding: rem(20px) rem(20px);
+          }
      }
      .menu-acco__text-rotate {
         color: $yellow;
