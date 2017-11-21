@@ -152,11 +152,4 @@ for (i=0; i<item.length; i++) {
             }
         )};
 
-        function init() {
-            var name = "Mozilla"; // name - локальная переменная, созданная в init
-            function displayName() { // displayName() - внутренняя функция, замыкание
-                alert (name); // displayName() использует переменную, объявленную в родительской функции    
-            }
-            displayName();    
-        }
-        init();
+      
