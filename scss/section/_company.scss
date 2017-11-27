@@ -1,5 +1,5 @@
 .company {
-    background-image: url('../img/bg/company.png');
+    background-image: url('../img/bg/company.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -93,6 +93,7 @@
   
   .company-acco__content {
    display: none;
+    overflow: hidden;
   }
   
   .company-acco__item_active {
@@ -106,8 +107,8 @@
     }
   
     .company-acco__content {
+      height: auto;
       display: flex;
-     
       align-items: center;
       position: relative;
       bottom: rem(20px);
@@ -123,7 +124,9 @@
         left: 0;
       }
     }
-  } 
+  }
+   
+
   .company-acco__pic {
     border-radius: 50%; 
     overflow: hidden;
@@ -139,10 +142,101 @@
  }
  .company-acco__text-content {
    width: rem(205px);
-   @include tablets {
+  @include tablets {
     width: rem(332px);
    }
   @include phones {
     width: rem(332px);
   }
  }
+
+
+//  .company-acco__content {
+//    position: relative;
+//    bottom: rem(20px);
+//    left: rem(20px);
+//    overflow: hidden;
+//   //  max-height: 0px;
+//    opacity: 0;
+//   //  transition: max-height 3s;
+//    transition: opacity 0.8s;
+//   }
+  
+//   .company-acco__item_active {
+//     .company-acco__trigger {
+//       color: $yellow;
+      
+//       &:before {
+//         transform: rotate(-180deg);
+//         transition: 0.3s;
+//       }
+//     }
+  
+//     .company-acco__content {
+//       // max-height: 9999px;
+//       height: auto;
+//       opacity: 1;
+//       position: relative;
+//       bottom: rem(20px);
+//       left: rem(20px);
+//       @include tablets {
+//         flex-direction: column;
+//         align-items: center;
+//         left: 0;
+//        }
+//       @include phones {
+//         flex-direction: column;
+//         align-items: center;
+//         left: 0;
+//       }
+//     }
+//     .company-acco__pic {
+//       margin-top: 0%; }
+//       .company-acco__text {
+//         margin-top: 0%; }  
+//   } 
+//   .company-acco__pic {
+//     margin-top: -100%;
+//     transition: 0.5s; 
+//     border-radius: 50%; 
+//     overflow: hidden;
+//     float: left;
+//   }
+//   .company-acco__pig-img {
+//       display: block;
+//       // border-radius: 50%;
+//   }
+//  .company-acco__text-title {
+//    font-weight: bold;
+//    margin-bottom: rem(20px);
+//  }
+//  .company-acco__text-content {
+//    width: rem(205px);
+//   @include tablets {
+//     width: rem(332px);
+//    }
+//   @include phones {
+//     width: rem(332px);
+//   }
+//  }
+
+//  .company-acco__text {
+//   margin-top: -100%;
+//   transition: 0.5s;
+//   float: left; 
+//   color: #fff;
+//   font-size: rem(14px);
+//   margin-left: rem(20px);
+//   margin-right: rem(20px);
+//   // width: rem(345px);
+//   @include tablets {
+//     text-align: center;
+//     margin-top: rem(20px);
+//    }
+//   @include phones {
+//     text-align: center;
+//     margin-top: rem(15px);
+//   }   
+  
+ 
+// }

@@ -12,6 +12,9 @@
 .pagination-list {
     display: flex;
     flex-direction: column;
+    background: rgba(#454545, .4);
+    border-radius: rem(11px);
+    padding:  rem(15px) rem(10px) rem(0px) rem(10px);
 
 }
 .pagination-list__item {
@@ -32,6 +35,23 @@
     opacity: 1;
      */
 }
+.pagination-list__item_active {
+
+    .pagination-list__link {
+        &::after {
+            content: '';
+            display: block;
+            width: rem(16px);
+            height: rem(16px);
+            border-radius: 50%;
+            border:rem(1px) solid white;
+            position: absolute;
+            top: rem(-5px);
+            left: rem(-5px);
+            }
+    }
+}
+
 .pagination-list__item:hover .pagination-list__link::after {
     content: '';
     display: block;
@@ -41,6 +61,5 @@
     border:rem(1px) solid white;
     position: absolute;
     top: rem(-5px);
-    left: rem(-5px);
-   
+    left: rem(-5px); 
 }

@@ -45,14 +45,15 @@
     }  
 }
 .footer__sosial {
+  display: flex;
   @include phones {
   margin-top: rem(15px);
   }
 }
+.footer__sosial-item {
+  margin-left: rem(20px);
+}
 .icon {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: rem(10px);
     fill: #5a5a5a;
     width: rem(20px);
     height: rem(20px);
@@ -64,9 +65,6 @@
     }
   }
   .phone {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: rem(20px);
     fill: $orange;
     width: rem(12px);
     height: rem(11px);

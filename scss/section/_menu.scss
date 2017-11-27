@@ -1,5 +1,5 @@
 .menu {
-    background-image: url('../img/bg/menu.png');
+    background-image: url('../img/bg/menu.jpg');
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
@@ -15,7 +15,12 @@
     // background: red;
     margin-top: rem(112px);
     text-align: center;
+    @include phones {
+        left: rem(20px);
+      }
 }
+
+
 .menu-acco {
     width: 70vw;
     
